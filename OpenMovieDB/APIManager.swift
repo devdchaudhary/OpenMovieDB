@@ -11,30 +11,26 @@ class APIManager {
     
     static let shared = APIManager()
     
-    func fetchMoviesData(searchQuery: String) async -> [MovieModel] {
+    func fetchMoviesData(searchQuery: String) async -> MovieModel {
         
-        let url = URL(string: "http://www.omdbapi.com/?t=\(searchQuery)&apiKey=\(Constants.token)")
-        var movies: [MovieModel] = []
+        guard let url = URL(string: "http://www.omdbapi.com/?t=\(searchQuery)&apiKey=\(Constants.token)") else { return MovieModel([:]) }
         
-        if let url {
+        let request = URLRequest(url: url)
+        
+        do {
             
-            let request = URLRequest(url: url)
+            let (data, _) = try await URLSession.shared.data(for: request)
             
-            do {
-                
-                let (data, _) = try await URLSession.shared.data(for: request)
-                
-                guard let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String: Any] else {
-                    return []
-                }
-                
-                movies = [MovieModel(json)]
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String: Any] else {
+                return MovieModel([:])
             }
-            catch {
-                return []
-            }
+            
+            return MovieModel(json)
+        }
+        catch {
+            print(error.localizedDescription)
         }
         
-        return movies
+        return MovieModel([:])
     }
 }

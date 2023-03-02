@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
     @Environment(\.colorScheme) var colorScheme
     @StateObject var moviesVM = MovieVM()
     
@@ -19,39 +19,44 @@ struct ContentView: View {
     init() {
         UIRefreshControl.appearance().tintColor = .systemTeal
     }
-        
+    
     var body: some View {
         
-        List(moviesVM.moviesList, id: \.uid) { movie in
+        VStack {
+            
+            HStack {
+                
+                TextField("Search", text: $searchQuery)
+                    .submitLabel(.search)
+                    .onSubmit {
+                        searchClicked(searchQuery)
+                        hideKeyboard()
+                    }
+                    .onChange(of: searchQuery) { query in
+                        
+                        
+                    }
+                
+                Spacer()
+                
+                Button(action: {
+                    searchClicked(searchQuery)
+                }) {
+                    Image(systemName: "magnifyingglass").foregroundColor(.black)
+                }
+                
+            }
+            .padding(.horizontal)
+            .padding(.vertical,10)
+            .background(Color(uiColor: .systemGray5))
+            .cornerRadius(30)
+            
+        }
+        .padding()
+        
+        List(moviesVM.moviesList.reversed(), id: \.uid) { movie in
             
             VStack(alignment: .leading) {
-                
-                HStack {
-                    
-                    TextField("Search", text: $searchQuery)
-                        .submitLabel(.search)
-                        .onSubmit {
-                            searchClicked(searchQuery)
-                            hideKeyboard()
-                        }
-                        .onChange(of: searchQuery) { query in
-                            
-                            
-                        }
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        searchClicked(searchQuery)
-                    }) {
-                        Image(systemName: "magnifyingglass").foregroundColor(.black)
-                    }
-                    
-                }
-                .padding(.horizontal)
-                .padding(.vertical,10)
-                .background(Color(uiColor: .systemGray5))
-                .cornerRadius(30)
                 
                 Text(movie.title)
                     .foregroundColor(colorScheme == .dark ? .white : .black)

@@ -14,7 +14,13 @@ class MovieVM: ObservableObject {
     @Published var moviesList: [MovieModel] = []
     
     func fetchMovies(_ query: String) async {
-        moviesList = await APIManager.shared.fetchMoviesData(searchQuery: query)
+        
+        let movie = await APIManager.shared.fetchMoviesData(searchQuery: query)
+        
+        withAnimation {
+            moviesList.append(movie)
+        }
+        
     }
     
 }
