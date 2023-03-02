@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61641DA299ADB2A00008DAC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61641D6299ADB2A00008DAC /* APIManager.swift */; };
+		B61641DB299ADB2A00008DAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61641D7299ADB2A00008DAC /* Constants.swift */; };
+		B61641DC299ADB2A00008DAC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61641D8299ADB2A00008DAC /* Model.swift */; };
+		B61641DD299ADB2A00008DAC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61641D9299ADB2A00008DAC /* ViewModel.swift */; };
+		B6727723299AE256005F9A15 /* RatingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6727722299AE256005F9A15 /* RatingsModel.swift */; };
+		B6727725299AE64A005F9A15 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6727724299AE64A005F9A15 /* Extensions.swift */; };
 		B6C90E8B299AC72B004A008A /* OpenMovieDBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C90E8A299AC72B004A008A /* OpenMovieDBApp.swift */; };
 		B6C90E8D299AC72B004A008A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C90E8C299AC72B004A008A /* ContentView.swift */; };
 		B6C90E8F299AC72C004A008A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C90E8E299AC72C004A008A /* Assets.xcassets */; };
@@ -14,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B61641D6299ADB2A00008DAC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B61641D7299ADB2A00008DAC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B61641D8299ADB2A00008DAC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B61641D9299ADB2A00008DAC /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B6727722299AE256005F9A15 /* RatingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsModel.swift; sourceTree = "<group>"; };
+		B6727724299AE64A005F9A15 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B6727726299AE7E0005F9A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B6C90E87299AC72B004A008A /* OpenMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C90E8A299AC72B004A008A /* OpenMovieDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieDBApp.swift; sourceTree = "<group>"; };
 		B6C90E8C299AC72B004A008A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,8 +64,15 @@
 		B6C90E89299AC72B004A008A /* OpenMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				B6727726299AE7E0005F9A15 /* Info.plist */,
 				B6C90E8A299AC72B004A008A /* OpenMovieDBApp.swift */,
 				B6C90E8C299AC72B004A008A /* ContentView.swift */,
+				B61641D6299ADB2A00008DAC /* APIManager.swift */,
+				B61641D7299ADB2A00008DAC /* Constants.swift */,
+				B61641D8299ADB2A00008DAC /* Model.swift */,
+				B6727724299AE64A005F9A15 /* Extensions.swift */,
+				B6727722299AE256005F9A15 /* RatingsModel.swift */,
+				B61641D9299ADB2A00008DAC /* ViewModel.swift */,
 				B6C90E8E299AC72C004A008A /* Assets.xcassets */,
 				B6C90E90299AC72C004A008A /* Preview Content */,
 			);
@@ -137,8 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6727723299AE256005F9A15 /* RatingsModel.swift in Sources */,
+				B61641DC299ADB2A00008DAC /* Model.swift in Sources */,
+				B61641DA299ADB2A00008DAC /* APIManager.swift in Sources */,
+				B6727725299AE64A005F9A15 /* Extensions.swift in Sources */,
 				B6C90E8D299AC72B004A008A /* ContentView.swift in Sources */,
 				B6C90E8B299AC72B004A008A /* OpenMovieDBApp.swift in Sources */,
+				B61641DD299ADB2A00008DAC /* ViewModel.swift in Sources */,
+				B61641DB299ADB2A00008DAC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +296,7 @@
 				DEVELOPMENT_TEAM = AFU28XCKKE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenMovieDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +326,7 @@
 				DEVELOPMENT_TEAM = AFU28XCKKE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenMovieDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
