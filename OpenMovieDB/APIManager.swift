@@ -2,7 +2,7 @@
 //  APIManager.swift
 //  APIPractice
 //
-//  Created by Devanshu Dev Chaudhary on 12/02/23.
+//  Created by devdchaudhary on 12/02/23.
 //
 
 import Foundation
