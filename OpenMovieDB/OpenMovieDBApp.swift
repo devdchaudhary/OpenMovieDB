@@ -2,7 +2,7 @@
 //  OpenMovieDBApp.swift
 //  OpenMovieDB
 //
-//  Created by dddiehard on 14/02/23.
+//  Created by devdchaudhary on 14/02/23.
 //
 
 import SwiftUI
