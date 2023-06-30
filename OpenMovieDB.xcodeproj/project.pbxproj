@@ -68,8 +68,8 @@
 			children = (
 				B6727726299AE7E0005F9A15 /* Info.plist */,
 				B6C90E8A299AC72B004A008A /* OpenMovieDBApp.swift */,
-				B6C90E8C299AC72B004A008A /* ContentView.swift */,
 				B61641D6299ADB2A00008DAC /* APIManager.swift */,
+				B6C90E8C299AC72B004A008A /* ContentView.swift */,
 				B61641D7299ADB2A00008DAC /* Constants.swift */,
 				B61641D8299ADB2A00008DAC /* Model.swift */,
 				B6727724299AE64A005F9A15 /* Extensions.swift */,
